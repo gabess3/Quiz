@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/CSS/style.css">
+    <title>Coding Quiz</title>
+</head>
+<body>
+    <main>
+        <div class="flex-timer">
+            <h3 class="timer" id="timer">45</h3>
+        </div>
+        <div class="title-page" id="title-page">
+            <h1>Coding Quiz Challenge</h1>
+            <p>Welcome to the coding quiz challenge! You will encounter various questions regarding JavaScript in the following quiz. Click the start button to begin!</p>
+            <button id="start">Start Quiz</button>
+        </div>
+        <div class="question-1" id="question-1">
+            <h2>Which of the following is not a way to declare a variable?</h2>
+            <button class="button1 incorrect">1. let </button>
+            <button class="button1 incorrect">2. const </button>
+            <button class="button1 correct">3. given </button>
+            <button class="button1 incorrect">4. var </button>
+        </div>
+        <div class="question-2" id="question-2">
+            <h2>An action that can be performed on an object is called a/an ___________.</h2>
+            <button class="button2 incorrect">1. Array </button>
+            <button class="button2 incorrect">2. Class </button>
+            <button class="button2 incorrect">3. Function </button>
+            <button class="button2 correct">4. Method </button>
+        </div>
+        <div class="question-3" id="question-3">
+            <h2>If a function is stored as a variable, which of the following is considered best practice to use?</h2>
+            <button class="button3 incorrect">1. var </button>
+            <button class="button3 correct">2. const </button>
+            <button class="button3 incorrect">3. let </button>
+            <button class="button3 incorrect">4. given </button>
+        </div>
+        <div class="question-4" id="question-4">
+            <h2>When 'this' is called by itself, it is referencing a/an/the ___________.</h2>
+            <button class="button4 correct">1. Window </button>
+            <button class="button4 incorrect">2. Array </button>
+            <button class="button4 incorrect">3. Document </button>
+            <button class="button4 incorrect">4. Variable </button>
+        </div>
+        <div class="finished" id="finished">
+            <h2>Game Over!</h2>
+            <form class="form">
+                <label class="form-content" for="full-name">Full name:</label><br>
+                <input type="text" id="full-name" name="full-name"><br>
+                <h4>Score: </h4>
+                <textarea id="score"></textarea>
+                <input class="form-content" type="submit" id="submit" name="submit">
+              </form>
+            <button id="done">Click to return to Homepage </button>
+            <a href="./highscores.html"> View High Scores</a>
+        </div>
+    </main>
+    <script src="./assets/JavaScript/script.js"></script>
+</body>
+
+</html>

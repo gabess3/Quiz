@@ -1,0 +1,196 @@
+/* Common button properties */
+
+:root {
+    --buttonWidth: 50%;
+    --buttonPadding: 5px;
+    --buttonMargin: 5px;
+}
+
+button:hover{
+    padding: 10px;
+    transition: 0.5s;
+    cursor:pointer;
+    border-radius: 8px;
+}
+
+/* Class for all buttons. Each needs to have an individual name so they can be called by the JavaScript event listener. IDs couldn't be used in this JavaScript structure since they were unique, and multiple buttons need to iterate in order to reach the next page. */
+
+.correct {
+    width: var(--buttonWidth);
+    padding: var(--buttonPadding);
+    margin: var(--buttonMargin);
+}
+
+
+.incorrect {
+    width: var(--buttonWidth);
+    padding: var(--buttonPadding);
+    margin: var(--buttonMargin);
+}
+
+.title-page button {
+    background-color: green;
+    color: white;
+    border-radius: 8px;
+    margin: 20px;
+}
+
+.button1 {
+    width: var(--buttonWidth);
+    padding: var(--buttonPadding);
+    margin: var(--buttonMargin);
+}
+
+.button2 {
+    width: var(--buttonWidth);
+    padding: var(--buttonPadding);
+    margin: var(--buttonMargin);
+}
+
+.button3 {
+    width: var(--buttonWidth);
+    padding: var(--buttonPadding);
+    margin: var(--buttonMargin);
+}
+
+.button4 {
+    width: var(--buttonWidth);
+    padding: var(--buttonPadding);
+    margin: var(--buttonMargin);
+}
+
+.finished button {
+    width: 25%;
+    padding: var(--buttonPadding);
+    margin: var(--buttonMargin);
+}
+
+
+/* Timer styles */
+
+.flex-timer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+}
+
+.timer {
+    color: red;
+    font-weight: bolder;
+    font-size: larger;
+    font-style: italic;
+    position: absolute;
+    display: none;
+}
+
+
+/* Title page styles */
+
+.title-page {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 200px;
+}
+
+.title-page h1 {
+    margin: 30px;
+    padding: 20px;
+    border-bottom: 1px solid black;
+}
+
+.title-page p {
+    margin: 30px;
+    padding: 20px;
+    border: 1px solid black;
+    width: 50%;
+}
+
+
+/* Question styles */
+
+.question-1 {
+    display: none;
+    flex-flow: column wrap;
+    align-items: left;
+    position: absolute;
+    left: 200px;
+    top: 200px;
+}
+
+.question-2 {
+    display: none;
+    flex-flow: column wrap;
+    align-items: left;
+    position: absolute;
+    left: 200px;
+    top: 200px;
+}
+
+.question-3 {
+    display: none;
+    flex-flow: column wrap;
+    align-items: left;
+    position: absolute;
+    left: 200px;
+    top: 200px;
+}
+
+.question-4 {
+    display: none;
+    flex-flow: column wrap;
+    align-items: left;
+    position: absolute;
+    left: 200px;
+    top: 200px;
+}
+
+
+/* Finished styles */
+
+.finished {
+    display: none;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 200px;
+}
+
+.finished a {
+    margin: 20px;
+}
+
+.form {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+}
+
+.form-content {
+    margin: 20px;
+}
+
+
+/* High Scores Styles */
+
+.score-title {
+    display: flex;
+    flex-flow:column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.return {
+    display: flex;
+    flex-flow:column wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 600px;
+}
