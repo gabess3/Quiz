@@ -7,6 +7,7 @@ var btn3 = document.getElementsByClassName("button3");;
 var btn4 = document.getElementsByClassName("button4");
 var btnDone = document.getElementById("done");
 
+
 // Variables used for correct / incorrect answers.
 
 var correctBtn = document.getElementsByClassName("correct");
@@ -60,7 +61,8 @@ btnDone.addEventListener("click", function() {
 );
 
 
-// Code for the timer, and to take user to the finished page if time runs out. Starts with 45 seconds. 
+
+// Function for the timer, and to take user to the finished page if time runs out. Starts with 45 seconds. 
 
 var secondsLeft = 45;
 var timer = document.querySelector(".timer");
@@ -104,8 +106,7 @@ function setTimer() {
     secondsLeft = 45;
 }
 
-// Correct answers counter for score display upon finishing the quiz.
-// Sets text content of score text area to the number of correct answers. 
+// Correct answers counter for score display upon finishing the quiz. Sets text content of score text area to the number of correct answers. 
 
 
 for (i=0; i<correctBtn.length; i++){
@@ -116,19 +117,20 @@ for (i=0; i<correctBtn.length; i++){
     })
 };
 
+
 var submitScore = document.getElementById("submit");
 var score = document.getElementById("score");
 var fullName = document.getElementById("full-name");
 var scoreList = document.getElementById("score-list");
 var highScore = document.getElementById("highscores");
 
-// Listens for submit click, and sets the name and score to local storage. 
- 
+// Listens for submit click, and sets the name and score to local storage.  
 
 submitScore.addEventListener("click", function(){
     localStorage.setItem("score", correctAnswers);
     localStorage.setItem("full-name", fullName.value);
 });
+
 
 // Grabs content from local storage, creates list item in the empty ul to which we add the full name and score as its text content.
 
