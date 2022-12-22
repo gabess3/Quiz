@@ -129,16 +129,15 @@ var scoreList = document.getElementById("score-list");
 submitScore.addEventListener("click", function(){
     localStorage.setItem("score", correctAnswers);
     localStorage.setItem("full-name", fullName.value);
+});
 
     // Grabs content from local storage, creates list item in the empty ul to which we add the full name and score as its text content.
 
-    var scoreListText = localStorage.getItem("score");
-    var fullNameText = localStorage.getItem("full-name");
-
-    var scoreListItem = document.createElement("li");
-    scoreListItem.textContent = fullNameText + ": " + scoreListText;
-    scoreList.append(scoreListItem);
-});
+var scoreText = localStorage.getItem("score");
+var fullNameText = localStorage.getItem("full-name");
+var scoreListItem = document.createElement("li");
+scoreListItem.textContent = fullNameText + ": " + scoreText;
+scoreList.appendChild(scoreListItem);
 
 // Sets display of high score page when button is clicked. 
 
