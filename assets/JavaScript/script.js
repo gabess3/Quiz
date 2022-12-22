@@ -140,6 +140,8 @@ submitScore.addEventListener("click", function(){
     scoreList.append(scoreListItem);
 });
 
+// Sets display of high score page when button is clicked. 
+
 highScore.addEventListener("click", function(){
     document.getElementById("finished").style.display = "none";
     document.getElementById("score-title").style.display = "flex";
