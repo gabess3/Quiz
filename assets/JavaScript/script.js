@@ -60,8 +60,6 @@ btnDone.addEventListener("click", function() {
     }
 );
 
-
-
 // Function for the timer, and to take user to the finished page if time runs out. Starts with 45 seconds. 
 
 var secondsLeft = 45;
@@ -121,6 +119,8 @@ for (i=0; i<correctBtn.length; i++){
 var submitScore = document.getElementById("submit");
 var score = document.getElementById("score");
 var fullName = document.getElementById("full-name");
+
+var highScore = document.getElementById("highscores");
 var scoreList = document.getElementById("score-list");
 
 
@@ -129,19 +129,15 @@ var scoreList = document.getElementById("score-list");
 submitScore.addEventListener("click", function(){
     localStorage.setItem("score", correctAnswers);
     localStorage.setItem("full-name", fullName.value);
-});
 
-// Grabs content from local storage, creates list item in the empty ul to which we add the full name and score as its text content.
+    // Grabs content from local storage, creates list item in the empty ul to which we add the full name and score as its text content.
 
-var highScore = document.getElementById("highscores");
-
-function addScore(){\
     var scoreListText = localStorage.getItem("score");
     var fullNameText = localStorage.getItem("full-name");
 
     var scoreListItem = document.createElement("li");
     scoreListItem.textContent = fullNameText + ": " + scoreListText;
     scoreList.append(scoreListItem);
-};
+});
 
-highScore.addEventListener("click", addScore()); 
+
