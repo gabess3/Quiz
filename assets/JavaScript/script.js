@@ -105,12 +105,14 @@ function setTimer() {
 }
 
 // Correct answers counter for score display upon finishing the quiz.
+// Sets text content of score text area to the number of correct answers. 
 
-var correctAnswers = 0;
 
 for (i=0; i<correctBtn.length; i++){
+    var correctAnswers = 0;
     correctBtn[i].addEventListener("click", function(){
         correctAnswers++;
+        score.textContent = correctAnswers;
     })
 };
 
@@ -119,19 +121,17 @@ var score = document.getElementById("score");
 var fullName = document.getElementById("full-name");
 var scoreList = document.getElementById("score-list");
 
-var scoreListText = localStorage.getItem("score");
-var fullNameText = localStorage.getItem("full-name");
-
-// Sets text content of score text area to the number of correct answers. 
-
-score.textContent = correctAnswers;
-
 // Listens for submit click, and sets the name and score to local storage. 
-// Creates list item in empty ul to add the full name and score to. 
+// Creates list item in empty ul to which we add the full name and score. 
 
 submitScore.addEventListener("click", function(){
     localStorage.setItem("score", correctAnswers);
     localStorage.setItem("full-name", fullName.value);
-    scoreList.innerHTML = "<li>" + fullNameText + ': ' + scoreListText +  "</li>";
+    var scoreListText = localStorage.getItem("score");
+    var fullNameText = localStorage.getItem("full-name");
+
+    var scoreListItem = document.createElement("li");
+    scoreListItem.innerHTML = fullNameText + ": " + scoreListText;
+    scoreList.append(scoreListItem);
 });
 
