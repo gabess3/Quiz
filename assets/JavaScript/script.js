@@ -140,4 +140,9 @@ submitScore.addEventListener("click", function(){
     scoreList.append(scoreListItem);
 });
 
+highScore.addEventListener("click", function(){
+    document.getElementById("finished").style.display = "none";
+    document.getElementById("score-title").style.display = "flex";
+})
+
 

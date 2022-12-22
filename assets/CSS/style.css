@@ -89,6 +89,12 @@ h2 {
     margin: var(--buttonMargin);
 }
 
+#high-scores {
+    width: var(--buttonWidth);
+    padding: var(--buttonPadding);
+    margin: var(--buttonMargin);
+}
+
 
 /* Timer styles */
 
@@ -212,17 +218,8 @@ h2 {
 /* High Scores Styles */
 
 .score-title {
-    display: flex;
+    display: none;
     flex-flow:column wrap;
     justify-content: center;
     align-items: center;
-}
-
-.return {
-    display: flex;
-    flex-flow:column wrap;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: 600px;
 }
