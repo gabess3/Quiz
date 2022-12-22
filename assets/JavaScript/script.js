@@ -120,18 +120,25 @@ var submitScore = document.getElementById("submit");
 var score = document.getElementById("score");
 var fullName = document.getElementById("full-name");
 var scoreList = document.getElementById("score-list");
+var highScore = document.getElementById("highscores");
 
 // Listens for submit click, and sets the name and score to local storage. 
-// Creates list item in empty ul to which we add the full name and score. 
+ 
 
 submitScore.addEventListener("click", function(){
     localStorage.setItem("score", correctAnswers);
     localStorage.setItem("full-name", fullName.value);
+});
+
+// Grabs content from local storage, creates list item in the empty ul to which we add the full name and score as its text content.
+
+highScore.addEventListener("click", function(){
     var scoreListText = localStorage.getItem("score");
     var fullNameText = localStorage.getItem("full-name");
 
     var scoreListItem = document.createElement("li");
-    scoreListItem.innerHTML = fullNameText + ": " + scoreListText;
+    scoreListItem.textContent = fullNameText + ": " + scoreListText;
     scoreList.append(scoreListItem);
 });
+
 
