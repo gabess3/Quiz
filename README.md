@@ -10,4 +10,5 @@ This project is meant to demonstrate the capabilities of using the DOM in JavaSc
 
 ## Link to application
 
-[gabess3.github.io/Quiz](gabess3.github.io/Quiz/)
+[gabess3.github.io/Quiz](https://gabess3.github.io/Quiz/)
+
