@@ -131,7 +131,7 @@ submitScore.addEventListener("click", function(){
     localStorage.setItem("full-name", fullName.value);
 });
 
-    // Grabs content from local storage, creates list item in the empty ul to which we add the full name and score as its text content.
+// Grabs content from local storage, creates list item in the empty ul to which we add the full name and score as its text content.
 
 var scoreText = localStorage.getItem("score");
 var fullNameText = localStorage.getItem("full-name");
